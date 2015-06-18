@@ -96,7 +96,7 @@ public final class lista_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\t\t\t</tbody>\r\n");
       out.write("\t\t</table>\r\n");
-      out.write("\t\t<a href=\"formulario.jsp\">Agregar nueva persona</a>\r\n");
+      out.write("\t\t<a href=\"home/persona\">Agregar nueva persona</a>\r\n");
       out.write("\t</div>\r\n");
       out.write("\r\n");
       out.write("</body>\r\n");

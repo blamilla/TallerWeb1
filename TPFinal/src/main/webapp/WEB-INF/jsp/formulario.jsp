@@ -8,28 +8,30 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form:form method="post" action="home.html">
+	<form:form method="post" action="/home">
 		<div class="form-group">
-			<form:label for="nombre">Nombre</form:label>
+			<form:label path="nombre">Nombre</form:label>
 			<input type="text" class="form-control" id="nombre"
 				placeholder="Nombre">
 		</div>
+		<br/>
 		<div class="form-group">
-			<form:label>
-				<form:label for="apellido">Apellido</form:label>
+				<form:label path="apellido">Apellido</form:label>
 				<input type="text" class="form-control" id="apellido"
 					placeholder="Apellido">
-			</form:label>
 		</div>
+		<br/>
 		<div class="form-group">
-			<form:label for="email">Email</form:label>
+			<form:label path="email">Email</form:label>
 			<input type="email" class="form-control" id="email"
 				placeholder="Ingresar Email">
 		</div>
+		<br/>
 		<div class="form-group">
-			<form:label for="edad">Edad</form:label>
+			<form:label path="edad">Edad</form:label>
 			<input type="text" class="form-control" id="edad" placeholder="Edad">
 		</div>
+		<br/>
 		<button type="submit" class="btn btn-default">Submit</button>
 	</form:form>
 </body>

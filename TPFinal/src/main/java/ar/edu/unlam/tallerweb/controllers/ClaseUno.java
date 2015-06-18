@@ -114,4 +114,46 @@ public class ClaseUno {
 		miVista.setViewName("lista");
 		return miVista;
 	}
+	
+	@RequestMapping(value = "home/persona", method = RequestMethod.GET)
+	public ModelAndView formPersona(){
+		return new ModelAndView("formulario", "command", new Persona());
+	}
+	
+	@RequestMapping(value = "/home", method = RequestMethod.POST)
+	public ModelAndView guardarPersona(
+			@ModelAttribute("persona")Persona p5, BindingResult result){
+		ModelMap miMapa = new ModelMap();
+		List<Persona> lista = new LinkedList<Persona>();
+		Persona p1 = new Persona();
+		Persona p2 = new Persona();
+		Persona p3 = new Persona();
+		Persona p4 = new Persona();
+		p1.setNombre("Brian1");
+		p1.setApellido("Lamilla");
+		p1.setEmail("brian.lamilla@gmail.com");
+		p1.setEdad(23);
+		p2.setNombre("Paola");
+		p2.setApellido("Ferrara");
+		p2.setEmail("pao.ferrara@gmail.com");
+		p2.setEdad(23);
+		p3.setNombre("Sebastian");
+		p3.setApellido("Ismael");
+		p3.setEmail("sebastian.ismael@gmail.com");
+		p3.setEdad(30);
+		p4.setNombre("Ruben");
+		p4.setApellido("Moreira");
+		p4.setEmail("ruben.moreira@gmail.com");
+		p4.setEdad(35);
+		lista.add(p1);
+		lista.add(p2);
+		lista.add(p3);
+		lista.add(p4);
+		lista.add(p5);
+		miMapa.put("lista", lista);
+		ModelAndView miVista = new ModelAndView();
+		miVista.addAllObjects(miMapa);
+		miVista.setViewName("lista");
+		return miVista;
+	}
 }

@@ -45,7 +45,7 @@
 				</c:forEach>
 			</tbody>
 		</table>
-		<a href="formulario.jsp">Agregar nueva persona</a>
+		<a href="home/persona">Agregar nueva persona</a>
 	</div>
 
 </body>
